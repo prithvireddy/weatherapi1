@@ -4,6 +4,15 @@ provider "azurerm" {
   }
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name = "tf_rg_blobstore"
+    storage_account_name = "tfstorageaccount11"
+    container_name = "tfstate"
+    key = "terraform.tfstate"
+  }
+}
+
 resource "azurerm_resource_group" "tf_test" {
   name = "tfmainrg"
   location = "Australia East"
@@ -28,5 +37,5 @@ resource "azurerm_container_group" "tfcg_test" {
       port     = 80
       protocol = "TCP"
         }
-  }
+  } 
 }
