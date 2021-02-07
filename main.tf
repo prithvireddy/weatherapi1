@@ -14,8 +14,8 @@ terraform {
 }
 
 resource "azurerm_resource_group" "tf_test" {
-  name = "tfmainrg"
-  location = "Australia East"
+  name = "tf_rg_blobstore"
+  location = "East US"
 }
 
 resource "azurerm_container_group" "tfcg_test" {
