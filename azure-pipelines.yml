@@ -44,6 +44,7 @@ stages:
 
         terraform init -input=false
         terraform import azurerm_resource_group.tf_test /subscriptions/0729c292-1a8a-46b5-b15e-a77d69a69102/resourceGroups/tfmainrg
+        terraform import azurerm_container_group.tfcg_test /subscriptions/0729c292-1a8a-46b5-b15e-a77d69a69102/resourceGroups/tfmainrg/providers/Microsoft.ContainerInstance/containerGroups/weatherapi
         terraform apply -input=false -auto-approve
       name: 'Runterraform'
       displayName: 'Run Terraform'
