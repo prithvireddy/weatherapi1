@@ -29,7 +29,7 @@ resource "azurerm_container_group" "tfcg_test" {
 
   container {
     name = "weatherapi"
-    image = "prithvireddy9/dotnetsample"
+    image = "prithvireddy9/dotnetsample:${var.imagebuild}"
     cpu =  "1"
     memory = "1"
 
